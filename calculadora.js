@@ -1,5 +1,20 @@
 class Calculadora {
-  //Seu código aqui
-} 
+  soma(a, b) {
+    return a + b;
+  }
 
-module.exports = Calculadora
+  subtracao(a, b) {
+    return a - b;
+  }
+
+  multiplicacao(a, b) {
+    return a * b;
+  }
+
+  divisao(a, b) {
+    if (b === 0) throw new Error("Não é possível dividir por zero");
+    return a / b;
+  }
+}
+
+module.exports = new Calculadora(); // Exporta a instância da classe
